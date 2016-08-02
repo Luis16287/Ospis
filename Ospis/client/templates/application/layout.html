@@ -1,0 +1,19 @@
+<template name="layout">
+    <div class="container">
+      {{> header}}
+      <!-- <div class="location">
+        <p>{{location}}{{algo}}</p>
+        <a id="change_address">Cambiar</a>
+      </div> -->
+      {{> locationsList}}
+      <div id="main">
+        {{> yield "main"}}
+      </div>
+
+    </div>
+    <div>
+      <div id="emergencias" style="display:none">
+        <!-- {{> yield "footer"}} -->
+      </div>
+    </div>
+</template>

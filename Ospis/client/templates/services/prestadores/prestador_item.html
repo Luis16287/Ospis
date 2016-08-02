@@ -1,0 +1,31 @@
+<!-- <template name="prestadorItem">
+  <div class="post">
+    <div class="post-content">
+      <label>Name</label>
+      <a href="/">{{name}}</a>
+    </div> -->
+    <!-- <a href="{{pathFor 'servicePage'}}" class="discuss btn btn-default">Mostrar</a> -->
+  <!-- </div>
+</template> -->
+
+
+<template name="prestadorItem">
+  <!-- <div class="post">
+    <div class="post-content">
+      <label>Name</label>
+
+    </div>
+  </div> -->
+
+  <li class="media">
+    <a class="pull-left" href="#"><img class="media-object" src="prestador.png" height="30" width="30"></a>
+    <p class="media-heading"><a>{{name}}</a></p>
+    <div id={{_id}} class="media-body" style="display:none">
+            <ol>
+              <li>{{address}}</li>
+              <li>{{phone}}</li>
+              <li>{{horario}}</li>
+            </ol>
+    </div>
+  </li>
+</template>

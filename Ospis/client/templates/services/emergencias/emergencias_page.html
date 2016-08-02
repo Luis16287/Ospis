@@ -1,0 +1,17 @@
+<template name="emergenciasPage">
+  <div class="post-page page">
+    <!-- {{> serviceItem}} -->
+    <label>{{service}}</label>
+    <!-- <div id="prestadores" style="display:block">
+      {{> prestadoresList}}
+    </div> -->
+    <!-- <div id="farmacias" style="display:block">
+      {{> farmaciasList}}
+    </div> -->
+    <div id="emergencias" style="display:block">
+      {{> emergenciasList}}
+    </div>
+
+    <input id="autocomplete" placeholder="Dirección" type="text" autocomplete="off" onfocus="initAutocomplete()">
+  </div>
+</template>

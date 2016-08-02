@@ -1,0 +1,15 @@
+<template name="especialidadPage">
+  <div class="container">
+    <div class="back">
+      <img id="back" class="media-object" src="back.png" height="20" width="20">
+      <h4>{{name}}</h4>
+    </div>
+    <div>      
+      <ul>
+        {{#each prestadores}}
+          {{> prestadorItem}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</template>

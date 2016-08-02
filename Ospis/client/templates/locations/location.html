@@ -1,0 +1,21 @@
+<template name="locationsList">
+  <div id="addForm" style={{display}}>
+    <form>
+      <ul>
+        <li>
+          <label>Selecciona una provincia:</label>
+            <select id = "locationList">
+              <option value="all">Todos</option>
+              {{#each locations}}
+                  {{> locationItem}}
+              {{/each}}
+            </select>
+        </li>
+      </ul>
+    </form>
+  </div>
+  </template>
+
+  <template name="locationItem">
+      <option value="{{name}}">{{name}}</option>
+  </template>

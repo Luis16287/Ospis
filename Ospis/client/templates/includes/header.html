@@ -1,0 +1,47 @@
+<template name="header">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <img src="logo.jpeg" class="img-responsive">
+      <div class="location">
+        <p>{{location}}{{algo}}</p>
+        <a id="change_address">Cambiar</a>
+      </div>
+    </div>
+    {{> changeLocation}}
+  </nav>
+</template>
+
+<template name="changeLocation">
+  <div class="modal fade" id="changeLocationModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Cambiar Ubicación</h4>
+        </div>
+
+        <div class="modal-body">
+          <!-- <label for="name">Ubicación</label> -->
+          <!-- <input type="text" id="location" /> -->
+          <!-- <div id="locationField">
+            <input id="autocomplete" placeholder="Ingrese nueva dirección" type="text" autocomplete="off">
+          </div> -->
+          <div class='input'>
+            <input id="autocomplete" type="text" autocomplete="off" class='input-field' required>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="save">Guardar</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).on({
+      'DOMNodeInserted': function() {
+        $('.pac-item, .pac-item span', this).addClass('needsclick');
+      }
+    }, '.pac-container');
+  </script>
+</template>
